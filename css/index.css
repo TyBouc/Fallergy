@@ -1,0 +1,31 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+.featured-track {
+  display: flex; /*row alignment*/
+  gap: 20px; /*card spacing*/
+  padding: 20px;
+  overflow-x: auto; /*auto scroll/*
+  scroll-snap-type: x mandatory; /*snap*/
+
+  -webkit-overflow-scrolling: touch; /*smoother scrolling, especially on ios*/
+}
+.featured-track::-webkit-scrollbar {
+  display: none;
+} 
+/*Card Styling*/
+.featured-card {
+  flex: 0 0 250px;
+  scroll-snap-align: start;
+  border: 1px solid #ddd; /*card color*/
+  border-radius: 8px;
+  background: white;
+  padding: 10px;
+}
+.featured-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /*good crop*/
+  border-radius: 4px;
+}
