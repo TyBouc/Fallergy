@@ -1,0 +1,8 @@
+To Do:
+- Redesign Footer
+    - Use MadeGood as reference
+- Redesign Header
+- Write and Design an about us page
+- Link to a database, setup account creation and login
+- Setup allergen preferences, search features, data structures, etc.
+- Talk to liam about backend setup, what are his plans for it?
