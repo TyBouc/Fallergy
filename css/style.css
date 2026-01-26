@@ -52,6 +52,7 @@
   --white:#ffffff;
   --off-white:#F2F2F2;
   --black:#000000;
+  --calm-grey: #6e6e6e;
 
   --bg:#f6f7fb;
   --text:#1f2937;
@@ -71,7 +72,7 @@
   --space-7:3rem;
 }
 :root{
-  --brand-main: var(--fallergy-blue);
+  --brand-main: var(--calm-grey);
   --brand-accent:  var(--fallergy-orange);
 }
 
@@ -81,7 +82,7 @@ html,body{margin:0;padding:0}
 body{
   font-family:'Lato',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   color:var(--text);
-  background:var(--bg);
+  background:var(--white);
   line-height:1.65;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;

@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="Images/FallergyLogo.png" type="image/png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Home | Fallergy</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="Images/FallergyLogo.png">
+  <link rel="shortcut icon" href="Images/FallergyLogo.png">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/index.css" />
+
+  <!-- JS -->
   <script src="js/index.js" defer></script>
-<html>
+</head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -17,7 +27,7 @@
     <div class="container nav-wrap">
       <div id="branding" class="branding">
         <a class="brand-link" href="index.html" aria-label="Fallergy">
-          <img src="Images/FallergyLogo.png" alt="Fallergy Logo" style="height:2.2em;vertical-align:middle;">
+          <img src="Images/FallergyLogo.png" alt="Fallergy Logo" style="height:2.2em;">
           <span class="brand-text"><span class="highlight">Fallergy</span></span>
         </a>
       </div>
@@ -29,20 +39,35 @@
         <span class="sr-only">Menu</span>
       </button>
 
-      <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Primary">
+      <nav id="primary-nav" class="primary-nav">
         <ul>
-          <li class="current"><a aria-current="page" href="index.html">Home</a></li>
+          <li class="current"><a href="index.html">Home</a></li>
           <li><a href="html/about.html">About Us</a></li>
         </ul>
       </nav>
-    </div>
+    </div> <!-- closes container nav-wrap -->
   </header>
-    </section>
 
-</header> <main id="main">
+  <main id="main">
     <div class="scrollable-container">
-      <h2 class="gt-gold-center">Featured Products</h2> <div class="featured-track" id="featured-list">
-        </div>
+      <h2 class="--prod-headline">Featured Products</h2>
+      <div class="featured-track" id="featured-list"></div>
+    </div>
+    <div class="featured-product-section">
+      <div class="featured-text">
+        <h2 class="--prod-headline">
+          Snack Without Worry – Made Good Granola Bars (Chatgpt example)
+        </h2>
+        <br><br>
+        <p id="sale-pitch">
+        <p>Made Good Granola Bars are crafted for everyone to enjoy, even if you have allergies. <br> Their bars are free from the top 10 allergens, including peanuts, tree nuts, dairy, and eggs, so you can snack with confidence.
+        <br> Try Made Good today – because everyone deserves a snack that’s safe, wholesome, and absolutely delicious. </p>
+  
+        </p>
+      </div>
+      <div class="featured-image">
+        <img src="Images/featuredProduct.png" alt="Popping Product">
+      </div>
     </div>
   </main>
 
@@ -53,5 +78,7 @@
         <span class="footer-instagram-text">Instagram</span>
       </a>
       <p style="margin-left:2.5em;">Fallergy &copy; 2026</p>
-      </div>
+    </div>
   </footer>
+</body>
+</html>
