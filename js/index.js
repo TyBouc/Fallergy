@@ -32,6 +32,8 @@ async function loadPhotos(data, containerId) {
 
         //image creation
         const img = document.createElement('img');
+
+        
         img.src = photo.url;
         img.alt = photo.alt || 'Featured Photo';
 
