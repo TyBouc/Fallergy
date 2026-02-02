@@ -8,7 +8,7 @@ JSON_FILE = "./Images/InstaScrollable/instaScrollable.json"
 # List all jpg files in the directory
 photos = []
 for filename in os.listdir(IMAGE_DIR):
-    if filename.lower().endswith(".jpg") or filename.lower().endswith(".png") or filename: 
+    if filename.lower().endswith(".jpg") or filename.lower().endswith(".png") or filename.lower().endswith(".jpeg"): 
         photos.append({
             "url": f"{IMAGE_DIR}/{filename}",  # path relative to your HTML
             "alt": os.path.splitext(filename)[0].replace("_", " ").title()  # nice alt text
