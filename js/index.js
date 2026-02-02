@@ -1,6 +1,6 @@
 const featuredList = document.getElementById('featured-list');
 const API_URL = 'https://opensheet.elk.sh/1bJ-3R5M-enmK4LKZ042DHpYqI7WfmML66aBFG_qnmNs/FeaturedProducts';
-const JSON_PHOTO_PATH = '../Images/InstaScrollable/instaScrollable.json';
+const JSON_PHOTO_PATH = 'Images/InstaScrollable/instaScrollable.json';
 
 /**
  * Gets all photos from the json file and calls loadPhotos to put them into a scrollable list
