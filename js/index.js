@@ -26,21 +26,27 @@ async function loadPhotos(data, containerId) {
     // Clear container
     container.innerHTML = '';
     data.forEach(photo => {
+        // Link Creation
+        const link = document.createElement('a');
+        link.href = 'https://instagram.com/fallergy';
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.classList.add('featured-link');
+        link.style.textDecoration = 'none';
+        link.style.color = 'inherit';
+
         //card creation
         const card = document.createElement('div');
         card.classList.add('featured-card');
 
         //image creation
         const img = document.createElement('img');
-
-        
         img.src = photo.url;
         img.alt = photo.alt || 'Featured Photo';
 
-
         card.appendChild(img);
-        container.appendChild(card);
-
+        link.appendChild(card);
+        container.appendChild(link);
     });
 }
 
