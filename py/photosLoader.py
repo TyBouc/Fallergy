@@ -10,7 +10,7 @@ photos = []
 for filename in os.listdir(IMAGE_DIR):
     if filename.lower().endswith(".jpg") or filename.lower().endswith(".png") or filename.lower().endswith(".jpeg"): 
         photos.append({
-            "url": f"{IMAGE_DIR}/{filename}",  # path relative to your HTML
+            "url": f"/Images/InstaScrollable/{filename}",  # absolute path from site root for GitHub Pages
             "alt": os.path.splitext(filename)[0].replace("_", " ").title()  # nice alt text
         })
 
