@@ -23,6 +23,11 @@ html, body {
   background: white;
   padding: 10px;
 }
+@media (max-width: 480px) {
+  .featured-card {
+    flex: 0 0 180px;
+  }
+}
 .featured-card img {
   width: 100%;
   height: 200px;
@@ -32,6 +37,18 @@ html, body {
 /* Controls Featured Products Headline*/
 .--prod-headline {
   margin-left: 40px;
+}
+@media (max-width: 768px) {
+  .--prod-headline {
+    margin-left: 20px;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .--prod-headline {
+    margin-left: 10px;
+    font-size: 1.2rem;
+  }
 }
 .featured-link {
     display: inline-block;      /* keeps the card width */
@@ -51,35 +68,75 @@ html, body {
   margin: 2rem 1rem;
   flex-wrap: wrap;
 }
+@media (max-width: 768px) {
+  .featured-product-section {
+    flex-direction: column;
+    margin: 1rem 0.5rem;
+  }
+}
 .featured-text {
   flex: 1 1 400px;
   min-width: 250px;
   max-width: 600px;
-  margin: 12rem 8rem 0rem 10rem;
+  margin: 2rem 1rem;
+}
+@media (max-width: 768px) {
+  .featured-text {
+    max-width: 100%;
+    margin: 1rem 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .featured-text {
+    flex: 1 1 100%;
+    margin: 0.5rem 0.25rem;
+  }
 }
 .featured-text h2 {
-    margin: 1rem 0 -3.5rem 0; /* top right bottom left */
-    font-size: 1.2rem;
-    font-weight: 600;
-    line-height: 1.2;
+  margin: 1rem 0 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+@media (max-width: 480px) {
+  .featured-text h2 {
+    font-size: 1rem;
+    margin: 0.5rem 0 0.5rem 0;
+  }
 }
 .featured-text p {
     margin: 0 0 0.5rem 0; /* top right bottom left */
 } 
 .featured-image {
-  flex: 0 0 600px;
+  flex: 1 1 400px;
+  min-width: 200px;
   display: flex;
   justify-content: center;
-  
-  
+}
+@media (max-width: 768px) {
+  .featured-image {
+    flex: 1 1 100%;
+  }
+}
+@media (max-width: 480px) {
+  .featured-image {
+    flex: 1 1 100%;
+    margin-top: 1rem;
+  }
 }
 .featured-image img {
   width: 100%;
+  max-width: 500px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  margin-top: 4rem;
+  margin-top: 1rem;
+}
+@media (max-width: 480px) {
+  .featured-image img {
+    margin-top: 0.5rem;
   }
+}
   /*Instagram Scrollable*/
   #insta-list {
     display: flex;
@@ -96,36 +153,60 @@ html, body {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+@media (max-width: 768px) {
+  .site-footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .site-footer {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
 
 .site-footer .container {
   max-width: none;
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .site-footer .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 .footer-left {
   display: flex;
-  align-items: left;
   flex-direction: column;
-  margin-left: 0px;
-  margin-top: 100px;
+  align-items: flex-start;
 }
 
 .footerTitle {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin: 0 0 0.5rem 0;
 }
+
 .footerText {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    margin-top: 3rem;
-    font-weight: 600;  
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  font-weight: 400;
+  line-height: 1.4;
 }
+@media (max-width: 480px) {
+  .footerText {
+    font-size: 0.9rem;
+  }
+}
+
 .text {
-    font-size: 1rem;
-    line-height: 1.5;
-    
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .signup-form {
@@ -133,12 +214,22 @@ html, body {
   flex-direction: column;
   gap: 0.5rem;
   align-items: flex-end;
-  margin-right: 100px;
+}
+@media (max-width: 768px) {
+  .signup-form {
+    align-items: stretch;
+  }
 }
 
 .signup-form .signup-heading {
   margin: 0 0 0.25rem 0;
   font-weight: 600;
+  font-size: 1rem;
+}
+@media (max-width: 480px) {
+  .signup-form .signup-heading {
+    font-size: 0.95rem;
+  }
 }
 
 .signup-form .text {
@@ -147,6 +238,11 @@ html, body {
   border: 1px solid #ccc;
   width: 200px;
   box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .signup-form .text {
+    width: 100%;
+  }
 }
 
 .signup-btn {
@@ -157,14 +253,8 @@ html, body {
   color: #fff;
   cursor: pointer;
 }
-
-@media (max-width: 640px) {
-  .site-footer .container {
-    flex-direction: column;
-    align-items: flex-start;
+@media (max-width: 480px) {
+  .signup-btn {
+    width: 100%;
   }
-  .signup-form {
-    align-items: stretch;
-  }
-  .signup-form .text { width: 100%; }
 }
