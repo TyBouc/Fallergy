@@ -1,9 +1,9 @@
 import os
 import json
 
-# Path to your images folder (relative to the script)
-IMAGE_DIR = "./Images/InstaScrollable"
-JSON_FILE = "./Images/InstaScrollable/instaScrollable.json"
+# Path to your images folder (relative to this script)
+IMAGE_DIR = "../Images/InstaScrollable"
+JSON_FILE = "../Images/InstaScrollable/instaScrollable.json"
 
 # List all jpg files in the directory
 photos = []

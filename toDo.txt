@@ -6,3 +6,4 @@ To Do:
 - Link to a database, setup account creation and login
 - Setup allergen preferences, search features, data structures, etc.
 - Talk to liam about backend setup, what are his plans for it?
+-we need better social media i can link to, also a contact us/ email
