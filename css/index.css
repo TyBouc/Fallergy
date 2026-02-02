@@ -55,6 +55,8 @@ html, body {
     flex: 0 0 auto;             /* prevent shrinking in flex container */
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
+    pointer-events: auto;
 }
 .featured-link:hover .featured-card {
   transform: scale(1.007);
