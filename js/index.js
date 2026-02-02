@@ -1,6 +1,6 @@
 const featuredList = document.getElementById('featured-list');
 const API_URL = 'https://opensheet.elk.sh/1bJ-3R5M-enmK4LKZ042DHpYqI7WfmML66aBFG_qnmNs/FeaturedProducts';
-const JSON_PHOTO_PATH = '/Images/InstaScrollable/instaScrollable.json';
+const JSON_PHOTO_PATH = '../Images/InstaScrollable/instaScrollable.json';
 
 /**
  * Gets all photos from the json file and calls loadPhotos to put them into a scrollable list
@@ -26,15 +26,6 @@ async function loadPhotos(data, containerId) {
     // Clear container
     container.innerHTML = '';
     data.forEach(photo => {
-        // Link Creation
-        const link = document.createElement('a');
-        link.href = 'https://instagram.com/fallergy';
-        link.target = '_blank';
-        link.rel = 'noopener';
-        link.classList.add('featured-link');
-        link.style.textDecoration = 'none';
-        link.style.color = 'inherit';
-
         //card creation
         const card = document.createElement('div');
         card.classList.add('featured-card');
@@ -44,9 +35,10 @@ async function loadPhotos(data, containerId) {
         img.src = photo.url;
         img.alt = photo.alt || 'Featured Photo';
 
+
         card.appendChild(img);
-        link.appendChild(card);
-        container.appendChild(link);
+        container.appendChild(card);
+
     });
 }
 
