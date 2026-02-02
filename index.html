@@ -23,7 +23,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" role="banner">
+  <header class="site-header" role="banner" id="header">
     <div class="container nav-wrap">
       <div id="branding" class="branding">
         <a class="brand-link" href="index.html" aria-label="Fallergy">
@@ -49,7 +49,7 @@
   </header>
 
   <main id="main">
-    <div class="scrollable-container">
+    <div class="scrollable-container" id="featured-section">
       <h2 class="--prod-headline">Featured Products</h2>
       <div class="featured-track" id="featured-list"></div>
     </div>
@@ -69,22 +69,20 @@
         <img src="Images/featuredProduct.png" alt="Popping Product">
       </div>
     </div>
-    <div class="scrollable-container">
+    <div class="scrollable-container" id="insta-section">
       <a href="https://instagram.com/fallergy" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
         <h2 class="--prod-headline">Keep Up - Join Our Instagram</h2>
       </a>
       <div class="featured-track" id="insta-list"></div>
     </div>
   </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="container" style="position:relative;">
-      <!-- To-Do for Passwords:
+<!-- To-Do for Passwords:
       - Make it look better
       - Add functionality to store user data securely
       - Add validation for email and password fields
       - add dob validation
       - add password strength check  -->
+  <footer class="site-footer" role="contentinfo">
 
       <div class="footer-left">
         <p class="footerTitle">Fallergy</p>

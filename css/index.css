@@ -50,6 +50,8 @@ html, body {
     font-size: 1.2rem;
   }
 }
+
+
 .featured-link {
     display: inline-block;      /* keeps the card width */
     flex: 0 0 auto;             /* prevent shrinking in flex container */
@@ -139,6 +141,16 @@ html, body {
     margin-top: 0.5rem;
   }
 }
+/* Specifically targets the container with your products */
+#featured-section {
+  background-image: url('../Images/lightOrangeBackground.jpg'); /* Path to your image */
+  background-size: cover;      /* Scales the image to fill the entire section */
+  background-position: center; /* Centers the design */
+  background-repeat: no-repeat;
+  margin-top: 0;            /* Keeps the gap closed */
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
   /*Instagram Scrollable*/
   #insta-list {
     display: flex;
@@ -147,11 +159,25 @@ html, body {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    padding-bottom: 20px;
   }
+  /* Specifically targets the container with your Instagram list */
+#insta-section {
+  background-image: url('../Images/InstaScrollable/swirlyPink.jpg'); /* Path to your image */
+  background-size: cover;      /* Scales the image to fill the entire section */
+  background-position: center; /* Centers the design */
+  background-repeat: no-repeat;
+  margin-bottom: 0;            /* Keeps the gap closed */
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+
+
 
 
 /* Footer layout: place title on left and signup form on the right */
 .site-footer {
+  margin-top:0;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -210,6 +236,7 @@ html, body {
   font-size: 1rem;
   line-height: 1.5;
 }
+
 
 .signup-form {
   display: flex;
