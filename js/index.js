@@ -1,5 +1,46 @@
 const featuredList = document.getElementById('featured-list');
 const API_URL = 'https://opensheet.elk.sh/1bJ-3R5M-enmK4LKZ042DHpYqI7WfmML66aBFG_qnmNs/FeaturedProducts';
+const JSON_PHOTO_PATH = '../Images/InstaScrollable/instaScrollable.json';
+
+/**
+ * Gets all photos from the json file and calls loadPhotos to put them into a scrollable list
+ */
+async function loadInstaPhotos() {
+    try {
+        const response = await fetch(JSON_PHOTO_PATH);
+        const data = await response.json();
+        loadPhotos(data, 'insta-list'); // pass container ID
+    } catch (error) {
+        console.error('Error loading Instagram photos:', error);
+    }
+}
+
+/**
+ * Dynamically load photos into a container
+ * @param {Array} data - Array of objects with { url, alt }
+ * @param {string} containerId - The ID of the container to append cards
+ */
+async function loadPhotos(data, containerId) {
+    const container = document.getElementById(containerId);
+        if (!container || !data) return;
+    // Clear container
+    container.innerHTML = '';
+    data.forEach(photo => {
+        //card creation
+        const card = document.createElement('div');
+        card.classList.add('featured-card');
+
+        //image creation
+        const img = document.createElement('img');
+        img.src = photo.url;
+        img.alt = photo.alt || 'Featured Photo';
+
+
+        card.appendChild(img);
+        container.appendChild(card);
+
+    });
+}
 
 async function loadProducts() {
     try {
@@ -33,12 +74,13 @@ async function loadProducts() {
                     <p style="font-weight: bold; margin: 0;">$${product.price}</p>
                 </div>
             `;
-            featuredList.appendChild(link);
             link.appendChild(card);
+            featuredList.appendChild(link);
+            
         });
     } catch (error) {
         console.error('Error fetching products:', error);
-        productList.innerHTML = '<p>Failed to load products</p>';
+        featuredList.innerHTML = '<p>Failed to load products</p>';
     }
 }
 loadProducts();

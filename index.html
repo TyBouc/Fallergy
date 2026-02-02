@@ -69,15 +69,35 @@
         <img src="Images/featuredProduct.png" alt="Popping Product">
       </div>
     </div>
+    <div class="scrollable-container">
+      <h2 class="--prod-headline">Keep Up!</h2>
+      <div class="featured-track" id="insta-list"></div>
+    </div>
   </main>
 
   <footer class="site-footer" role="contentinfo">
     <div class="container" style="position:relative;">
-      <a href="https://www.instagram.com/Fallergy/" target="_blank" rel="noopener" class="footer-instagram-link" aria-label="Instagram" style="position:absolute;left:0;bottom:0;display:flex;align-items:center;padding:0.5rem 0.75rem;">
-        <img src="Images/Instagram_Icon.PNG" alt="Instagram Icon" style="height:2em;width:2em;display:block;margin-right:0.5em;" />
-        <span class="footer-instagram-text">Instagram</span>
-      </a>
-      <p style="margin-left:2.5em;">Fallergy &copy; 2026</p>
+      <!-- To-Do for Passwords:
+      - Make it look better
+      - Add functionality to store user data securely
+      - Add validation for email and password fields
+      - add dob validation
+      - add password strength check  -->
+
+      <div class="footer-left">
+        <p class="footerTitle">Fallergy</p>
+        <p class="footerText">Join our community to stay updated on the latest allergy-friendly products and offers!</p>
+      </div>
+      <form class="signup-form" action="#" onsubmit="return false;">
+        <p class="signup-heading">Sign Up Here!</p>
+        <input class="text" type="text" name="first" placeholder="First Name" />
+        <input class="text" type="text" name="last" placeholder="Last Name" />
+        <input class="text" type="email" name="email" placeholder="Enter your email" />
+        <input class="text" type="password" name="password" placeholder="Password" />
+        <input class="text" type="password" name="confirm" placeholder="Confirm Password" />
+        <input class="text" type="text" name="dob" placeholder="Date Of Birth (mm/dd/yyyy)" />
+        <button type="submit" class="signup-btn">Sign Up</button>
+      </form>
     </div>
   </footer>
 </body>
